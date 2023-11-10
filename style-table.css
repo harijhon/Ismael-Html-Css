@@ -1,0 +1,101 @@
+/* Table  */
+
+.table-section{
+    width: 80vw;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: .8rem;
+    background-color: var(--secondary-color);
+}
+
+.table-header{
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table-header h1{
+    justify-self: center;
+}
+.table-body{
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+
+    margin: 0.8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+.table-body::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre de défilement */
+    height: 12px; /* Hauteur de la barre de défilement */
+}
+.table-body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #f0ffff;
+    visibility: hidden;
+}
+.table-body::-webkit-scrollbar-thumb:hover{
+    visibility: visible;
+}
+table{
+    width: 100%;
+}
+table, th,td{
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: center;
+}
+thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+/* Zebra setting */
+tbody tr:nth-child(even){
+    background-color: #ccc;
+}
+
+tbody tr:hover{
+    background-color: #fff;
+}
+.status{
+    padding: 0.4rem 0s;
+    border-radius: 2rem;
+    text-align: center;
+}
+.valider{
+    background-color: var(--success-color);
+    color: #fff;
+}
+.attente{
+    background-color: var(--warning-color);
+    color: #fff;
+}
+.refuser{
+    background-color: var(--danger-color);
+    color: #fff;
+}
+
+/* if their is some image in the table
+    it will be displayed as an icon
+*/
+td img{
+    width: 36px;
+    height: 36px;
+    margin-right: 0.5em;
+    border-radius: 50%;
+
+    vertical-align: middle;
+}
+@media (max-width: 1000px) {
+    td:not(:first-of-type){
+        min-width: 12.1rem;
+    }
+}

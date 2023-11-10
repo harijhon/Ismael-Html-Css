@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.input-area{
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+}
+.input-container{
+    position: relative;
+    height: 100%;
+    width: 200px;
+    line-height: 80px;
+}
+.text-input{
+    position: absolute;
+    outline: none;
+    font-size: 14px;
+    padding: 0 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 2px solid #f0ffff;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+}
+
+
+
+.label-line{
+    width: fit-content;
+    height: 20px;
+    position: absolute;
+    font-size: 12px;
+    color: #f0ffff;
+    /* padding: 0 25px; */
+    margin: -23px 20px;
+    background-color: #1c2841;
+    transition: 0.2s ease;
+}
+
+input:hover,
+input:valid{
+    color: var(--success-color);
+    border: 4px solid var(--success-color);
+}
+input:hover + .label-line,
+input:valid + .label-line{
+    color: var(--success-color);
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    transform: translate(-10px,7px);
+    z-index: 1111;
+}
+
+
+/* date */
+.date-input{
+    position: absolute;
+    outline: none;
+    font-size: 14px;
+    padding: 0 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 2px solid #f0ffff;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+    color: #f0ffff;
+}
+::-webkit-calendar-picker-indicator {
+    background-color: #f0ffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.date-input:valid::-webkit-calendar-picker-indicator {
+    background-color: var(--success-color); /* Changer la couleur de fond en vert lorsque l'input est valide */
+}
+.date-input:hover::-webkit-calendar-picker-indicator {
+    background-color: var(--success-color); /* Changer la couleur de fond en vert lorsque l'input est valide */
+}
+.input-label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: -30px;
+    color: #f0ffff;
+}
+
+.date-input:hover + .input-label,
+.date-input:valid + .input-label {
+    color: var(--success-color);
+}
+
+
+/* file */
+input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent;
+    border: solid 2px;
+    padding: 8px 16px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.file-label i {
+    margin-right: 4px;
+}
+
+/* Style lorsque le fichier est sélectionné */
+.file-selected {
+    border-color: var(--success-color); /* Changer la couleur de la bordure en rouge par exemple */
+    color: var(--success-color);
+}
+
+
+
+
+/* check box */
+.check-container {
+    display: flex;
+    align-items: center;
+}
+
+.check-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f0ffff;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    margin-right: 5px;
+    position: relative; /* Position relative pour positionner l'icône */
+}
+
+.check-input::before {
+    content: ""; /* Contenu vide pour l'icône */
+    width: 16px; /* Largeur de l'icône */
+    height: 16px; /* Hauteur de l'icône */
+    background-color: transparent; /* Couleur de fond transparente par défaut */
+    border: 2px solid transparent; /* Bordure transparente par défaut */
+    border-radius: 2px; /* Arrondit les coins de l'icône */
+    position: absolute; /* Position absolue pour l'icône */
+    top: 50%; /* Positionne l'icône verticalement au milieu de la case à cocher */
+    left: 50%; /* Positionne l'icône horizontalement au milieu de la case à cocher */
+    transform: translate(-50%, -50%); /* Centre l'icône */
+}
+
+.check-label {
+    font-weight: 500;
+    color: #f0ffff;
+    cursor: pointer;
+}
+
+/* Styles lorsque la case est cochée */
+.check-input:checked ~ .check-label {
+    color: var(--success-color);
+}
+
+
+/* Styles pour l'icône lorsque la case est cochée */
+.check-input:checked::before {
+    border-radius: 10px;
+    background-color: var(--success-color); /* Couleur de fond de l'icône lorsque la case est cochée */
+    border-color: var(--success-color); /* Bordure de l'icône lorsque la case est cochée */
+}
+
+/* select */
+
+/* Style de base pour le select */
+.select-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+.select-label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-left: 10px ;
+    color: #f0ffff;
+}
+
+select {
+    width: fit-content; /* Largeur du select */
+    padding: 10px; /* Espacement interne du select */
+    font-size: 14px; /* Taille de la police du select */
+    border: 2px solid #ccc; /* Bordure du select */
+    border-radius: 10px; /* Coins arrondis du select */
+    background: transparent;
+    color: #f0ffff; /* Couleur du texte du select */
+    cursor: pointer; /* Curseur au survol du select */
+}
+
+/* Style pour les options du select */
+select option {
+    background-color: #fff; /* Couleur de fond des options */
+    color: #333; /* Couleur du texte des options */
+}
+
+/* Style pour le bouton déroulant (flèche) */
+select::after {
+    content: '\25BC'; /* Utilisation d'un caractère Unicode pour représenter la flèche déroulante */
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    font-size: 25px; /* Taille de la police de la flèche */
+    color: #333; /* Couleur de la flèche */
+}
+/* Style pour l'option sélectionnée */
+select option:checked {
+    background-color: var(--primary-color); /* Couleur de fond de l'option sélectionnée */
+    color: var(--primary-color); /* Couleur du texte de l'option sélectionnée */
+}
+

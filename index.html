@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ICONS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style-side-bar.css" />
+    <link rel="stylesheet" href="style-inputs.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-table.css">
+    <link rel="stylesheet" href="style-btn.css">
+    <title>Side Bar Component</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar active">
+            <div class="menu-btn">
+                <i class="ph-bold ph-caret-left"></i>
+            </div>
+            <div class="head">
+                <div class="user-img">
+                    <img src="user.jpg" alt="">
+                </div>
+                <div class="user-details">
+                    <p class="title">web developer</p>
+                    <p class="name">Jhon Doe</p>
+                </div>
+            </div>
+            <!-- head end -->
+            <div class="nav">
+                <div class="menu">
+                    <p class="title">Main</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-house-simple"></i>
+                                <span class="text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-user "></i>
+                                <span class="text">Audience</span>
+                                <i class="arrow ph-bold ph-caret-down "></i>
+                            </a>
+                            <!-- debut sous menu -->
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Users</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Subcribers</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <i class="icon ph-bold ph-file-text"></i>
+                                <span class="text">Posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-calendar-blank"></i>
+                                <span class="text">Schedules</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-chart-bar "></i>
+                                <span class="text">Income</span>
+                                <i class="arrow ph-bold ph-caret-down "></i>
+                            </a>
+                            <!-- debut sous menu -->
+                            <ul class="sub-menu">
+                                <!-- sub-menu items -->
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Earnings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Funds</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Declines</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Payouts</span>
+                                    </a>
+                                </li>
+                                <!--end of sub-menu items -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu">
+                    <p class="title">Settings</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="icon ph-bold ph-gear"></i>
+                                <span class="text">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="menu">
+                <p class="title">Accounts</p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icon ph-bold ph-info"></i>
+                            <span class="text">Help</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon ph-bold ph-sign-out"></i>
+                            <span class="text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+
+            <div class="remise-avec-abonnement">
+                <span> -20% </span><span class="abonnement">Si abonner 20.000 ar</span>
+            </div>
+
+
+            <!-- <div class="input-area">
+          <div class="input-container">
+            <input type="text" class="text-input" required>
+            <div class="label-line">Enter your name</div>
+          </div>
+            <div class="input-container">
+                <label class="input-label" for="date-inpt">Choose a date</label>
+                <input type="datetime-local" class="date-input" id="date-inpt" required>
+            </div>
+          <div class="check-container">
+              <input type="checkbox" class="check-input" id="check-input" required>
+              <label for="check-input" class="check-label">checkbox</label>
+          </div>
+          <div class="select-container">
+              <label class="select-label" for="select">Select one item</label>
+              <select name="select" id="select">
+                  <option value="">Selectionner une option</option>
+                  <option value="">Hehe</option>
+                  <option value="">Hehe</option>
+              </select>
+          </div>
+          <div class="file-input">
+              <input type="file" name="file" id="file-btn" class="file-btn" required>
+              <label class="file-label" for="file-btn"><i class="fa-solid fa-file"></i> Upload File</label>
+          </div> -->
+        </div>
+
+        <!--<div class="table-section">
+          <section class="table-header">
+              <h1>Table title</h1>
+          </section>
+          <section class="table-body">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>id</th>
+                          <th>Customer</th>
+                          <th>Location</th>
+                          <th>Order Date</th>
+                          <th>Status</th>
+                          <th>Amount</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status attente">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status valider" >Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Jean</td>
+                          <td>Tana</td>
+                          <td>17 Dec, 2020</td>
+                          <td>
+                              <p class="status refuser">Delivered</p>
+                          </td>
+                          <td>20.000 ar</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </section>
+        </div> -->
+    </div>
+    </div>
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous"></script>
+    <script src="script-side-bar.js"></script>
+    <script src="script-inputs.js"></script>
+</body>
+
+</html>
