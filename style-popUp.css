@@ -80,7 +80,7 @@ body {
 
 .button.clicked button {
     visibility: hidden;
-    oacity: 0;
+    opacity: 0;
 }
 
 .pop-up {
@@ -113,10 +113,12 @@ body {
     text-align: center;
     position: relative;
     min-height: 100vh;
+    padding-top: 50px;
 }
 
 .pop-up .content .container {
-    padding: 100px 20px 140px;
+    padding-top: 100px;
+    padding: 100px 50px 140px;
 }
 
 .pop-up .content .close {

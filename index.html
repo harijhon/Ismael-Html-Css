@@ -8,12 +8,15 @@
     <!-- ICONS -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- STYLESHEET -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-lKuw9eS9gRfNUp1rRlK7CpUpWl7F/Z9sFkU1TVu1Z1AqrqPFt5P4/8iRvI8d8S6R" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style-popUp.css">
     <link rel="stylesheet" href="style-side-bar.css" />
     <link rel="stylesheet" href="style-inputs.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-table.css">
     <link rel="stylesheet" href="style-btn.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>Html and css bases</title>
 </head>
@@ -145,197 +148,11 @@
 
         <div class="main-content">
 
-
-
-
-            <!-- <div class="input-area">
-          <div class="input-container">
-            <input type="text" class="text-input" required>
-            <div class="label-line">Enter your name</div>
-          </div>
-            <div class="input-container">
-                <label class="input-label" for="date-inpt">Choose a date</label>
-                <input type="datetime-local" class="date-input" id="date-inpt" required>
+            <div class="file-input">
+                <input type="file" name="file" id="file-btn" class="file-btn" required>
+                <label class="file-label" for="file-btn"><i class="ph-bold ph-file "></i> Upload File</label>
             </div>
-          <div class="check-container">
-              <input type="checkbox" class="check-input" id="check-input" required>
-              <label for="check-input" class="check-label">checkbox</label>
-          </div>
-          <div class="select-container">
-              <label class="select-label" for="select">Select one item</label>
-              <select name="select" id="select">
-                  <option value="">Selectionner une option</option>
-                  <option value="">Hehe</option>
-                  <option value="">Hehe</option>
-              </select>
-          </div>
-          <div class="file-input">
-              <input type="file" name="file" id="file-btn" class="file-btn" required>
-              <label class="file-label" for="file-btn"><i class="fa-solid fa-file"></i> Upload File</label>
-          </div> -->
         </div>
-
-        <!--<div class="table-section">
-          <section class="table-header">
-              <h1>Table title</h1>
-          </section>
-          <section class="table-body">
-              <table>
-                  <thead>
-                      <tr>
-                          <th>id</th>
-                          <th>Customer</th>
-                          <th>Location</th>
-                          <th>Order Date</th>
-                          <th>Status</th>
-                          <th>Amount</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status attente">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status valider" >Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Jean</td>
-                          <td>Tana</td>
-                          <td>17 Dec, 2020</td>
-                          <td>
-                              <p class="status refuser">Delivered</p>
-                          </td>
-                          <td>20.000 ar</td>
-                      </tr>
-                  </tbody>
-              </table>
-          </section>
-        </div> -->
         <div class="button">
             <button class="btn"><span>Click Me</span></button>
         </div>
@@ -344,9 +161,59 @@
             <div class="content">
                 <div class="container">
                     <span class="close">close</span>
-                    <div class="title">
-                        <h1>subscribe</h1>
-                    </div>
+                    <form action="">
+                        <!--  General -->
+                        <div class="form-group">
+                            <h2 class="heading">Booking & contact</h2>
+                            <div class="controls">
+                                <input type="text" id="name" class="floatLabel" name="name">
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="controls">
+                                <input type="text" id="email" class="floatLabel" name="email">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="controls">
+                                <input type="tel" id="phone" class="floatLabel" name="phone">
+                                <label for="phone">Phone</label>
+                            </div>
+                            <div class="grid">
+                                <div class="col-2-3">
+                                    <div class="controls">
+                                        <input type="text" id="street" class="floatLabel" name="street">
+                                        <label for="street">Street</label>
+                                    </div>
+                                </div>
+                                <div class="col-1-3">
+                                    <div class="controls">
+                                        <input type="number" id="street-number" class="floatLabel" name="street-number">
+                                        <label for="street-number">Number</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="col-2-3">
+                                    <div class="controls">
+                                        <input type="text" id="city" class="floatLabel" name="city">
+                                        <label for="city">City</label>
+                                    </div>
+                                </div>
+                                <div class="col-1-3">
+                                    <div class="controls">
+                                        <input type="text" id="post-code" class="floatLabel" name="post-code">
+                                        <label for="post-code">Post Code</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="controls">
+                                <input type="text" id="country" class="floatLabel" name="country">
+                                <label for="country">Country</label>
+                            </div>
+                        </div>
+
+                        <!-- /.form-group -->
+                        <button type="submit" value="Submit" class="btn">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -359,6 +226,7 @@
     <script src="script-side-bar.js"></script>
     <script src="script-inputs.js"></script>
     <script src="script-popUP.js"></script>
+    <script src="script-check-box.js"></script>
 </body>
 
 </html>
