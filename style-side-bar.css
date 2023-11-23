@@ -1,6 +1,6 @@
-.sidebar {
+.main-sidebar {
     display: none;
-    position: relative;
+    position: sticky;
     width: 256px;
     height: 100vh;
     display: flex;
@@ -13,7 +13,7 @@
     z-index: 3;
 }
 
-.sidebar .head {
+.main-sidebar .head {
     display: flex;
     gap: 20px;
     border-bottom: 1px solid #f6f6f6;
@@ -32,7 +32,7 @@
 }
 
 .user-details .title,
-.menu .title {
+.sidebar-menu .title {
     font-size: 10px;
     font-weight: 500;
     color: #757575;
@@ -45,17 +45,13 @@
     font-weight: 500;
 }
 
-.nav {
-    flex: 1;
-}
-
-.menu ul li {
+.sidebar-menu ul li {
     position: relative;
     list-style: none;
     margin-bottom: 5px;
 }
 
-.menu ul li a {
+.sidebar-menu ul li a {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -68,30 +64,30 @@
     transition: all 0.3s;
 }
 
-.menu ul li>a:hover,
-.menu ul li.active>a {
+.sidebar-menu ul li>a:hover,
+.sidebar-menu ul li.menu-open>a {
     color: #000;
     background-color: #f6f6f6;
 }
 
-.menu ul li .icon {
+.sidebar-menu ul li .icon {
     font-size: 20px;
 }
 
-.menu ul li .arrow {
+.sidebar-menu ul li .arrow {
     font-size: 14px;
     transform: all 0.3s;
 }
 
-.menu ul li.active .arrow {
+.sidebar-menu ul li.menu-open .arrow {
     transform: rotate(180deg);
 }
 
-.menu ul li .text {
+.sidebar-menu ul li .text {
     flex: 1;
 }
 
-.menu .sub-menu {
+.sidebar-menu .treeview-menu {
     display: none;
     margin-left: 20px;
     padding-left: 20px;
@@ -99,12 +95,12 @@
     border-left: 1px solid #f6f6f6;
 }
 
-.menu .sub-menu li a {
+.sidebar-menu .treeview-menu li a {
     padding: 10px 8px;
     font-size: 12px;
 }
 
-.menu:not(:last-child) {
+.sidebar-menu:not(:last-child) {
     padding-bottom: 10px;
     margin-bottom: 20px;
     border-bottom: 2px solid #f6f6f6;
@@ -134,34 +130,34 @@
     transition: all 0.3s;
 }
 
-.sidebar.active {
+.main-sidebar.menu-open {
     width: 92px;
 }
 
-.sidebar.active .menu-btn i {
+.main-sidebar.menu-open .menu-btn i {
     transform: rotate(180deg);
 }
 
-.sidebar.active .user-details {
+.main-sidebar.menu-open .user-details {
     display: none;
 }
 
-.sidebar.active .menu .title {
+.main-sidebar.menu-open .sidebar-menu .title {
     text-align: center;
 }
 
-.sidebar.active .menu ul li .arrow {
+.main-sidebar.menu-open .sidebar-menu ul li .arrow {
     display: none;
 }
 
-.sidebar.active .menu>ul>li>a {
+.main-sidebar.menu-open .sidebar-menu>ul>li>a {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar.active .menu>ul>li>a .text {
+.main-sidebar.menu-open .sidebar-menu>ul>li>a .text {
     position: absolute;
     left: 70px;
     top: 50%;
@@ -175,7 +171,7 @@
     transition: all 0.3s;
 }
 
-.sidebar.active .menu>ul>li>a .text::after {
+.main-sidebar.menu-open .sidebar-menu>ul>li>a .text::after {
     content: "";
     position: absolute;
     left: -5px;
@@ -188,13 +184,13 @@
     z-index: -1;
 }
 
-.sidebar.active .menu>ul>li>a:hover .text {
+.main-sidebar.menu-open .sidebar-menu>ul>li>a:hover .text {
     left: 50px;
     opacity: 1;
     visibility: visible;
 }
 
-.sidebar.active .menu .sub-menu {
+.main-sidebar.menu-open .sidebar-menu .treeview-menu {
     position: absolute;
     top: 0;
     left: 20px;

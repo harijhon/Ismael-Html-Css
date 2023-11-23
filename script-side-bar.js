@@ -1,17 +1,17 @@
-$(".menu > ul > li").click(function(e) {
-    // remove active from already active
-    $(this).siblings().removeClass("active");
-    // add active to clicked
-    $(this).toggleClass("active");
+$(".sidebar-menu > ul > li").click(function(e) {
+    // remove menu-open from already menu-open
+    $(this).siblings().removeClass("menu-open");
+    // add menu-open to clicked
+    $(this).toggleClass("menu-open");
 
-    // active sub menu open/close
+    // menu-open sub menu open/close
     $(this).find("ul").slideToggle();
     // close other sub menu if any open
     $(this).siblings().find("ul").slideUp();
-    // remove active class of sub menu items
-    $(this).siblings().find("ul").find("li").removeClass("active");
+    // remove menu-open class of sub menu items
+    $(this).siblings().find("ul").find("li").removeClass("menu-open");
 })
 
 $(".menu-btn").click(function() {
-    $(".sidebar").toggleClass("active");
+    $(".main-sidebar").toggleClass("menu-open");
 })

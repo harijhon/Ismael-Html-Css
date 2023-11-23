@@ -10,20 +10,21 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-lKuw9eS9gRfNUp1rRlK7CpUpWl7F/Z9sFkU1TVu1Z1AqrqPFt5P4/8iRvI8d8S6R" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style-popUp.css">
-    <link rel="stylesheet" href="style-side-bar.css" />
-    <link rel="stylesheet" href="zoul-style.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-side-bar.css">
+    <link rel="stylesheet" href="style-inputs.css">
+    <link rel="stylesheet" href="style-popUp.css">
     <link rel="stylesheet" href="style-table.css">
     <link rel="stylesheet" href="style-btn.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-recap-filter.css">
+
 
     <title>Html and css bases</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="sidebar active">
+        <div class="main-sidebar menu-open">
             <div class="menu-btn">
                 <i class="ph-bold ph-caret-left"></i>
             </div>
@@ -38,7 +39,7 @@
             </div>
             <!-- head end -->
             <div class="nav">
-                <div class="menu">
+                <div class="sidebar-menu">
                     <p class="title">Main</p>
                     <ul>
                         <li>
@@ -54,7 +55,7 @@
                                 <i class="arrow ph-bold ph-caret-down "></i>
                             </a>
                             <!-- debut sous menu -->
-                            <ul class="sub-menu">
+                            <ul class="treeview-menu">
                                 <li>
                                     <a href="#">
                                         <span class="text">Users</span>
@@ -67,7 +68,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="active">
+                        <li class="menu-open">
                             <a href="#">
                                 <i class="icon ph-bold ph-file-text"></i>
                                 <span class="text">Posts</span>
@@ -86,8 +87,8 @@
                                 <i class="arrow ph-bold ph-caret-down "></i>
                             </a>
                             <!-- debut sous menu -->
-                            <ul class="sub-menu">
-                                <!-- sub-menu items -->
+                            <ul class="treeview-menu">
+                                <!-- treeview-menu items -->
                                 <li>
                                     <a href="#">
                                         <span class="text">Earnings</span>
@@ -108,13 +109,13 @@
                                         <span class="text">Payouts</span>
                                     </a>
                                 </li>
-                                <!--end of sub-menu items -->
+                                <!--end of treeview-menu items -->
                             </ul>
                         </li>
                     </ul>
                 </div>
 
-                <div class="menu">
+                <div class="sidebar-menu">
                     <p class="title">Settings</p>
                     <ul>
                         <li>
@@ -127,7 +128,7 @@
                 </div>
 
             </div>
-            <div class="menu">
+            <div class="sidebar-menu">
                 <p class="title">Accounts</p>
                 <ul>
                     <li>
@@ -147,26 +148,214 @@
         </div>
 
         <div class="main-content">
-            <div style="width: 300px; height: 200px; padding: 20px; background-color: rgb(237, 237, 237);">
-                <label for="text" class="label-simple">Label</label>
-                <input type="text" name="text" class="input-simple">
-                <label for="date" class="label-simple">Label</label>
-                <input type="date" name="date" class="input-simple">
-                <label for="select" class="label-simple">Label</label>
-                <select name="select" class="select-simple">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
+
+            <div class="table-container">
+                <div class="table-section">
+                    <div class="table-header">
+                        <h1>Title</h1>
+                        <div class="options">
+                            <button class="btn btn-primary">Show Recap</button>
+                            <button class="btn btn-primary">Show Filter</button>
+                        </div>
+                    </div>
+                    <div class="table-body">
+                        <table class="table table-sortable">
+                            <thead>
+                                <tr>
+                                    <th>Rank &darr;&uarr;</th>
+                                    <th>Name &darr;&uarr;</th>
+                                    <th>Age &darr;&uarr;</th>
+                                    <th>Occupation &darr;&uarr;</th>
+                                    <th>Rank &darr;&uarr;</th>
+                                    <th>Name &darr;&uarr;</th>
+                                    <th>Age &darr;&uarr;</th>
+                                    <th>Occupation &darr;&uarr;</th>
+                                    <th>Occupation &darr;&uarr;</th>
+                                    <th>Occupation &darr;&uarr;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label class="check-label"> 
+                                            <input type="checkbox" name="check"> <span class="label-text">Item One </span> </input> 
+                                        </label>
+                                    </td>
+                                    <td><input type="radio" name="" id=""></td>
+                                    <td>35</td>
+                                    <td>Web Developer</td>
+                                    <td>1</td>
+                                    <td>Dom</td>
+                                    <td>35</td>
+                                    <td>Web Developer</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Rebecca</td>
+                                    <td>29</td>
+                                    <td>Teacher</td>
+                                    <td>2</td>
+                                    <td>Rebecca</td>
+                                    <td>29</td>
+                                    <td>Teacher</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>John</td>
+                                    <td>30</td>
+                                    <td>Civil Engineer</td>
+                                    <td>3</td>
+                                    <td>John</td>
+                                    <td>30</td>
+                                    <td>Civil Engineer</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Andre</td>
+                                    <td>20</td>
+                                    <td>Dentist</td>
+                                    <td>4</td>
+                                    <td>Andre</td>
+                                    <td>20</td>
+                                    <td>Dentist</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dom</td>
+                                    <td>35</td>
+                                    <td>Web Developer</td>
+                                    <td>1</td>
+                                    <td>Dom</td>
+                                    <td>35</td>
+                                    <td>Web Developer</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Rebecca</td>
+                                    <td>29</td>
+                                    <td>Teacher</td>
+                                    <td>2</td>
+                                    <td>Rebecca</td>
+                                    <td>29</td>
+                                    <td>Teacher</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>John</td>
+                                    <td>30</td>
+                                    <td>Civil Engineer</td>
+                                    <td>3</td>
+                                    <td>John</td>
+                                    <td>30</td>
+                                    <td>Civil Engineer</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Andre</td>
+                                    <td>20</td>
+                                    <td>Dentist</td>
+                                    <td>4</td>
+                                    <td>Andre</td>
+                                    <td>20</td>
+                                    <td>Dentist</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dom</td>
+                                    <td>35</td>
+                                    <td>Web Developer</td>
+                                    <td>1</td>
+                                    <td>Dom</td>
+                                    <td>35</td>
+                                    <td>Web Developer</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Rebecca</td>
+                                    <td>29</td>
+                                    <td>Teacher</td>
+                                    <td>2</td>
+                                    <td>Rebecca</td>
+                                    <td>29</td>
+                                    <td>Teacher</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>John</td>
+                                    <td>30</td>
+                                    <td>Civil Engineer</td>
+                                    <td>3</td>
+                                    <td>John</td>
+                                    <td>30</td>
+                                    <td>Civil Engineer</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Andre</td>
+                                    <td>20</td>
+                                    <td>Dentist</td>
+                                    <td>4</td>
+                                    <td>Andre</td>
+                                    <td>20</td>
+                                    <td>Dentist</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="table-footer">
+                    <div class="number-result">
+                        <p>
+                            1-20 résultats sur 350
+                        </p>
+                    </div>
+                    <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a href="#" class="menu-open">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">&raquo;</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="file-input">
-                <input type="file" name="file" id="file-btn" class="file-btn" required>
-                <label class="file-label" for="file-btn"><i class="ph-bold ph-file "></i> Upload File</label>
+            <div class="filter-section inactive"></div>
+            <div class="recap-section">
+                <form action="">
+                    <!--  General -->
+                    <div class="form-group">
+                        <h2 class="heading">Booking & contact</h2>
+                        <div class="controls">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="floatLabel" name="name">
+                        </div>
+                        <div class="controls">
+                            <label for="email">Email</label>
+                            <input type="number" id="email" class="floatLabel" name="email">
+                        </div>
+                        <div class="controls">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" class="floatLabel" name="phone">
+                        </div>
+                        <div class="controls">
+                            <label for="country">Country</label>
+                            <input type="date" id="country" class="floatLabel" name="country">
+
+                        </div>
+                    </div>
+
+                    <!-- /.form-group -->
+                    <div class="actions-container">
+                        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" value="Submit" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="button">
+        <div class="button" style="display: none;">
             <button class="btn"><span>Click Me</span></button>
         </div>
 
@@ -174,59 +363,7 @@
             <div class="content">
                 <div class="container">
                     <span class="close">close</span>
-                    <form action="">
-                        <!--  General -->
-                        <div class="form-group">
-                            <h2 class="heading">Booking & contact</h2>
-                            <div class="controls">
-                                <input type="text" id="name" class="floatLabel" name="name">
-                                <label for="name">Name</label>
-                            </div>
-                            <div class="controls">
-                                <input type="text" id="email" class="floatLabel" name="email">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="controls">
-                                <input type="tel" id="phone" class="floatLabel" name="phone">
-                                <label for="phone">Phone</label>
-                            </div>
-                            <div class="grid">
-                                <div class="col-2-3">
-                                    <div class="controls">
-                                        <input type="text" id="street" class="floatLabel" name="street">
-                                        <label for="street">Street</label>
-                                    </div>
-                                </div>
-                                <div class="col-1-3">
-                                    <div class="controls">
-                                        <input type="number" id="street-number" class="floatLabel" name="street-number">
-                                        <label for="street-number">Number</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid">
-                                <div class="col-2-3">
-                                    <div class="controls">
-                                        <input type="text" id="city" class="floatLabel" name="city">
-                                        <label for="city">City</label>
-                                    </div>
-                                </div>
-                                <div class="col-1-3">
-                                    <div class="controls">
-                                        <input type="text" id="post-code" class="floatLabel" name="post-code">
-                                        <label for="post-code">Post Code</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="controls">
-                                <input type="text" id="country" class="floatLabel" name="country">
-                                <label for="country">Country</label>
-                            </div>
-                        </div>
-
-                        <!-- /.form-group -->
-                        <button type="submit" value="Submit" class="btn">Submit</button>
-                    </form>
+                    <!-- pop up content -->
                 </div>
             </div>
         </div>
@@ -234,12 +371,13 @@
     </div>
 
     <!-- Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous"></script> -->
     <script src="jquery3.7.0.js"></script>
     <script src="script-side-bar.js"></script>
     <script src="script-inputs.js"></script>
     <script src="script-popUP.js"></script>
     <script src="script-check-box.js"></script>
+    <script src="filter.js"></script>
 </body>
 
 </html>

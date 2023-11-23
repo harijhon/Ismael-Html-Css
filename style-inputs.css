@@ -301,18 +301,6 @@ summary {
 
 /* ---------------------------------------- */
 
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body {
-    text-align: center;
-    font-family: 'Lato', 'sans-serif';
-    font-weight: 400;
-}
-
 a {
     text-decoration: none;
 }
@@ -343,7 +331,6 @@ h2.heading {
 }
 
 .controls {
-    text-align: left;
     position: relative;
 }
 
@@ -355,11 +342,10 @@ h2.heading {
 .controls textarea,
 .controls button,
 .controls select {
-    padding: 12px;
+    padding: 8px;
     font-size: 14px;
-    border: 1px solid #c6c6c6;
     width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
     color: #888;
     font-family: 'Lato', 'sans-serif';
     font-size: 16px;
@@ -371,7 +357,9 @@ h2.heading {
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    border-radius: 16px;
+    border-radius: 12px;
+    background-color: white;
+    border: none;
 }
 
 .controls input[type="text"]:focus,
@@ -391,7 +379,6 @@ h2.heading {
 .controls select:focus,
 .controls select:hover {
     outline: none;
-    border-color: #9FB1C1;
 }
 
 .controls input[type="text"]:focus+label,
@@ -428,21 +415,16 @@ h2.heading {
 }
 
 .controls label {
-    position: absolute;
-    left: 8px;
-    top: 12px;
+    padding: 4px 10px;
+    white-space: nowrap;
     width: 60%;
     color: #999;
     font-size: 16px;
     display: inline-block;
-    padding: 4px 10px;
-    font-weight: 400;
-    background-color: rgba(255, 255, 255, 0);
     -moz-transition: color 0.3s, top 0.3s, background-color 0.8s;
     -o-transition: color 0.3s, top 0.3s, background-color 0.8s;
     -webkit-transition: color 0.3s, top 0.3s, background-color 0.8s;
     transition: color 0.3s, top 0.3s, background-color 0.8s;
-    background-color: white;
 }
 
 .controls label.active {
@@ -455,19 +437,6 @@ h2.heading {
 .controls textarea {
     resize: none;
     height: 200px;
-}
-
-button {
-    cursor: pointer;
-    background-color: #1b3d4d;
-    border: none;
-    color: #fff;
-    padding: 12px 0;
-    float: right;
-}
-
-button:hover {
-    background-color: #224c60;
 }
 
 .clear:after {
