@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container b-container is-txl is-z200" id="b-container">
+            <form class="form" id="b-form" method="" action="">
+                <h2 class="form_title title">Inscription</h2>
+                <input class="form__input" type="text" placeholder="Identifiant" name="identifiant">
+                <input class="form__input" type="password" placeholder="Password" name="passe">
+                <span class="input-addon" onclick="showMDP()">Show password</span>
+                <button class="form__button button submit">SIGN IN</button>
+            </form>
+        </div>
+        <div class="switch is-txr" id="switch-cnt">
+
+            <div class="switch__circle is-txr"></div>
+            <div class="switch__circle switch__circle--t is-txr"></div>
+            <div class="switch__container" id="switch-c1">
+                <img src="image/BICI.svg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <script>
+        function showMDP() {
+            console.log("tonga");
+            var d = document.getElementsByName("passe")[0];
+            if (d.type === "password") {
+                d.type = "text";
+
+
+                return;
+            }
+            if (d.type === "text") {
+                d.type = "password";
+                return;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -95,11 +95,10 @@ input[type="checkbox"]:disabled+.label-text:before {
 
 /* another input */
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 .check-label {
     cursor: pointer;
-    color: #666;
+    color: #333;
 }
 
 input[type="checkbox"] {
@@ -150,99 +149,6 @@ input[type="checkbox"]:disabled+.label-text:before {
 
 
 /* ///////////////////////////////////////////////////////////////////////////// */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
-}
-
-html {
-    line-height: 1;
-}
 
 ol,
 ul {
@@ -312,22 +218,24 @@ a {
 
 header,
 form {
-    padding: 4em 10%;
+    padding: 16px 16px;
 }
 
-.form-group {
+.filter-section .form-group {
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
 h2.heading {
+    position: absolute;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 300;
     text-align: left;
     color: #506982;
-    border-bottom: 1px solid #506982;
-    padding-bottom: 3px;
-    margin-bottom: 20px;
+    top: 20px;
+    /* padding-bottom: 3px; */
+    margin-bottom: 16px;
 }
 
 .controls {
@@ -347,7 +255,6 @@ h2.heading {
     width: 100%;
     margin-bottom: 8px;
     color: #888;
-    font-family: 'Lato', 'sans-serif';
     font-size: 16px;
     font-weight: 300;
     -moz-border-radius: 2px;
@@ -418,7 +325,7 @@ h2.heading {
     padding: 4px 10px;
     white-space: nowrap;
     width: 60%;
-    color: #999;
+    color: #333;
     font-size: 16px;
     display: inline-block;
     -moz-transition: color 0.3s, top 0.3s, background-color 0.8s;
@@ -498,4 +405,13 @@ h2.heading {
 
 .col-1-8 {
     width: 12.5%;
+}
+
+.actions-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.actions-container .btn {
+    margin-top: 6px;
 }

@@ -1,87 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ICONS -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!-- STYLESHEET -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-lKuw9eS9gRfNUp1rRlK7CpUpWl7F/Z9sFkU1TVu1Z1AqrqPFt5P4/8iRvI8d8S6R" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-side-bar.css">
-    <link rel="stylesheet" href="style-inputs.css">
-    <link rel="stylesheet" href="style-popUp.css">
-    <link rel="stylesheet" href="style-table.css">
-    <link rel="stylesheet" href="style-btn.css">
-    <link rel="stylesheet" href="style-recap-filter.css">
-
-
-    <title>Html and css bases</title>
+    <title>Screenshot Capture and Upload</title>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+    <style>
+        #photo {
+            border: 4px solid green;
+            padding: 4px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-
-        <div class="main-content">
-            <div class="filter-section inactive"></div>
-            <div class="recap-section">
-                <form action="">
-                    <!--  General -->
-                    <div class="form-group">
-                        <h2 class="heading">Booking & contact</h2>
-                        <div class="controls">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="floatLabel" name="name">
-                        </div>
-                        <div class="controls">
-                            <label for="email">Email</label>
-                            <input type="text" id="email" class="floatLabel" name="email">
-                        </div>
-                        <div class="controls">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" class="floatLabel" name="phone">
-                        </div>
-                        <div class="controls">
-                            <label for="country">Country</label>
-                            <input type="text" id="country" class="floatLabel" name="country">
-
-                        </div>
-                    </div>
-
-                    <!-- /.form-group -->
-                    <div class="actions-container">
-                        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
-                        <button type="submit" value="Submit" class="btn btn-secondary">Reset</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="button" style="display: none;">
-            <button class="btn"><span>Click Me</span></button>
-        </div>
-
-        <div class="pop-up">
-            <div class="content">
-                <div class="container">
-                    <span class="close">close</span>
-                    <!-- pop up content -->
-                </div>
-            </div>
-        </div>
+    <div id="photo">
+        <img src="https://static-c398.kxcdn.com/assets//img/product/300/20231122-401827482_661083626161186_6604479897724011231_n.jpg" alt="" srcset="">
+        <h1>GeeksforGeeks</h1>
+        Hello everyone! This is a trial page for taking a screenshot.
+        <br><br> This is a dummy button!
+        <button>Dummy</button>
+        <br><br> Click the button below to take a screenshot of the div.
+        <br><br>
+        <button onclick="takeScreenshot()">Take Screenshot</button>
     </div>
-    </div>
+    <h1>Screenshot:</h1>
+    <div id="output"></div>
 
-    <!-- Jquery -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous"></script> -->
-    <script src="jquery3.7.0.js"></script>
-    <script src="script-side-bar.js"></script>
-    <script src="script-inputs.js"></script>
-    <script src="script-popUP.js"></script>
-    <script src="script-check-box.js"></script>
-    <script src="filter.js"></script>
+    <script type="text/javascript">
+        function takeScreenshot() {
+            let div = document.getElementById('photo');
+
+            html2canvas(div).then(function(canvas) {
+                let dataURL = canvas.toDataURL();
+                console.log(dataURL);
+                fetch('https://static-c398.kxcdn.com/assets/img/product/', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        dataURL: dataURL
+                    }),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(function(response) {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('Upload failed');
+                    }
+                }).then(function(data) {
+                    document.getElementById('output').innerHTML = 'Screenshot uploaded successfully. URL: ' + data.url;
+                }).catch(function(error) {
+                    console.error('Error:', error);
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>

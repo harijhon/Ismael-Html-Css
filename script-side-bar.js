@@ -14,4 +14,10 @@ $(".sidebar-menu > ul > li").click(function(e) {
 
 $(".menu-btn").click(function() {
     $(".main-sidebar").toggleClass("menu-open");
+    if (!$(".recap-section").hasClass("inactive")) {
+        $(".recap-section").addClass("inactive");
+    } else if (!$(".filter-section").hasClass("inactive")) {
+        $(".filter-section").addClass("inactive");
+    }
+
 })

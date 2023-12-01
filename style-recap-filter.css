@@ -1,6 +1,6 @@
 .filter-section,
 .recap-section {
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     flex-direction: row;
     width: 250px;
@@ -8,7 +8,7 @@
     max-height: 90vh;
     border-radius: 16px;
     background: lightblue;
-    right: 16px;
+    /* right: 16px; */
 }
 
 .actions-container {
