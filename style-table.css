@@ -204,3 +204,8 @@ table tbody tr:nth-child(odd) {
         gap: 150px;
     }
 }
+
+#editor {
+    width: 400px; /* Largeur de l'éditeur */
+    height: 200px; /* Hauteur de l'éditeur */
+}

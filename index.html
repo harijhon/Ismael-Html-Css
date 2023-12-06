@@ -10,6 +10,10 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-lKuw9eS9gRfNUp1rRlK7CpUpWl7F/Z9sFkU1TVu1Z1AqrqPFt5P4/8iRvI8d8S6R" crossorigin="anonymous">
 
+
+    <!-- Text-editor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-layout.css">
     <link rel="stylesheet" href="style-side-bar.css">
@@ -201,22 +205,44 @@
                                             </input>
                                         </label>
                                         <div class="controls">
-                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Type">
+                                            <select id="id" class="floatLabel" name="name">
+                                                <option value="">Bug</option>
+                                                <option value="">Création</option>
+                                                <option value="">Modification</option>
+                                            </select>   
                                         </div>
                                     </td>
                                     <td>
                                         <div class="controls">
-                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="description">
+                                            <!-- <input type="text" id="id" class="floatLabel" name="name" placeholder="description"> -->
+                                            <textarea id="editor"></textarea>
+                                            <script>
+                                                ClassicEditor
+                                                    .create(document.querySelector('#editor'))
+                                                    .catch(error => {
+                                                        console.error(error);
+                                                    });
+                                            </script>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="controls">
-                                            <input type="date" id="id" class="floatLabel" name="name" placeholder="Coté">
+                                            <select id="id" class="floatLabel" name="name" placeholder="Coté">
+                                                <option value="">Affichage</option>
+                                                <option value="">Base de données</option>
+                                                <option value="">Javascript</option>
+                                                <option value="">Mapping</option>
+                                                <option value="">Menu</option>
+                                                <option value="">Métier</option>
+                                                <option value="">Moteur</option>
+                                                <option value="">PDF</option>
+                                                <option value="">TEST</option>
+                                            </select>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="controls">
-                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Date">
+                                            <input type="date" id="id" class="floatLabel" name="name" placeholder="Date">
                                         </div>
                                     </td>
                                     <td>

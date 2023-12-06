@@ -417,3 +417,30 @@ h2.heading {
 .actions-container .btn {
     margin-top: 6px;
 }
+
+
+select {
+    appearance: none;
+    padding: 10px 30px 10px 10px; /* Pour laisser de la place pour l'icône de sélection */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 200px;
+    position: relative; /* Nécessaire pour positionner l'icône */
+  }
+  
+  /* Style pour l'icône de sélection */
+  select::after {
+    content: ''; /* Contenu vide pour l'icône */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; /* Triangle pointant vers le bas */
+    border-right: 5px solid transparent; /* Triangle pointant vers le bas */
+    border-top: 5px solid #555; /* Triangle pointant vers le bas */
+    pointer-events: none;
+  }
