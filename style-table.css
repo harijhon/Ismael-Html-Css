@@ -4,12 +4,10 @@
     align-content: center;
     flex-direction: column;
     width: 100%;
-    width: fit-content;
 }
 
 .table-section {
     transition: width 0.3s ease;
-    max-width: 90vw;
     padding: 16px;
     flex-grow: 8;
     height: 80vh;
@@ -20,7 +18,7 @@
     align-items: center;
     border-radius: .8rem;
     background-color: var(--secondary-color);
-    overflow: auto;
+    /*overflow: auto;*/
     border: 1px solid transparent;
     position: relative;
     z-index: 1;
@@ -106,10 +104,11 @@ table {
     border-collapse: collapse;
     font-family: Tahoma, Geneva, sans-serif;
     border-radius: 8px;
-    width: fit-content;
+    width: 100%;
     table-layout: auto;
     height: 100%;
     max-width: 100%;
+    overflow-x: scroll
 }
 
 table td,
@@ -117,7 +116,7 @@ table th {
     padding: 15px;
     white-space: nowrap;
     text-align: left;
-    /* width: 100%; */
+    /*width: 100%;*/
 }
 
 table thead th {
@@ -131,6 +130,7 @@ table thead th {
     left: 0;
     z-index: 99;
 }
+
 
 
 /* Ajoutez cette règle pour spécifier une largeur minimale basée sur le contenu */
