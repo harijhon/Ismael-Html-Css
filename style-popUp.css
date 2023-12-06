@@ -24,7 +24,7 @@
     opacity: 0;
     transition: all 0.3s;
     z-index: 10;
-    background-color: lightblue;
+    background-color: white;
     width: fit-content;
     height: 85%;
     max-width: 85%;
@@ -44,12 +44,18 @@
     overflow: hidden;
     position: relative;
     min-height: 100vh;
-    padding-top: 16px;
+    padding: 16px;
 }
 
 .pop-up-container {
+    display: flex;
+    align-items: center;
     padding-top: 100px;
     padding: 100px 50px 140px;
+}
+
+.pop-up-container .title {
+    align-self: center;
 }
 
 .pop-up .content .close {
@@ -60,6 +66,8 @@
     letter-spacing: 0.05rem;
     color: #3e4146;
     transition: all 0.4s;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .pop-up .content .close:hover {

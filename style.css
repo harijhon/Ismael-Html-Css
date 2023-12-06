@@ -14,6 +14,7 @@
     --warning-color: #ffc107;
     --link-btn-color: var(--primary-color);
     --medium-dont-size: 14px;
+    --input-border: #01093F;
 }
 
 * {
@@ -21,15 +22,4 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter";
-}
-
-body {}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    white-space: nowrap;
 }

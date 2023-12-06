@@ -24,6 +24,8 @@
 </head>
 
 <body>
+
+
     <div class="container">
         <div class="main-sidebar menu-open">
             <div class="menu-btn">
@@ -131,58 +133,128 @@
         </div>
 
         <div class="main-content">
+            <style>
+                .alert {
+                    margin-top: 16px;
+                    position: relative;
+                    padding: 0.75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: 0.25rem;
+                    color: #721c24;
+                    background-color: #f8d7da;
+                    border-color: #f5c6cb;
+                }
+                
+                .alert .closebtn {
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    color: #F70000;
+                    cursor: pointer;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+            </style>
+
+
 
             <div class="table-container">
+                <div class="alert">
+                    <h4>Error!</h4>
+                    <p>There was an error processing your request. Please try again later.</p>
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
                 <div class="table-section ">
                     <div class="table-header">
-                        <h1>Insertion Multiple
-
-                        </h1>
+                        <h1>Insertion Multiple</h1>
                         <div class="options">
-                            <button class="btn btn-primary" id="recap-btn">Show Recap</button>
-                            <button class="btn btn-primary" id="filter-btn"> Show Filter</button>
+                            <button class="btn btn-primary" id="recap-btn">Ajouter une colonne</button>
+                            <button class="btn btn-primary" id="filter-btn"> Supprimer une colonne</button>
                         </div>
                     </div>
                     <div class="table-body">
                         <table class="table table-sortable">
                             <thead>
                                 <tr>
-                                    <th>ID &darr;&uarr;</th>
-                                    <th>Libelle &darr;&uarr;</th>
-                                    <th>description &darr;&uarr;</th>
-                                    <th>date creation &darr;&uarr;</th>
+                                    <th>Type</th>
+                                    <th>description</th>
+                                    <th>Coté</th>
+                                    <th>Date</th>
+                                    <th>Heure</th>
+                                    <th>Responsable</th>
+                                    <th>Niveau</th>
+                                    <th>Estimation</th>
+                                    <th>Fichier</th>
+                                    <th>Priorité</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>FR000001</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>2023-11-18 09:11:00.0 </td>
-                                </tr>
-                                <tr>
-                                    <td>FR000001</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>2023-11-18 09:11:00.0 </td>
-                                </tr>
-                                <tr>
-                                    <td>FR000001</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>2023-11-18 09:11:00.0 </td>
-                                </tr>
-                                <tr>
-                                    <td>FR000001</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>2023-11-18 09:11:00.0 </td>
+                                    <td style="display: flex;align-items: center;">
+                                        <label class="check-label">
+                                            <input type="checkbox" name="check">
+                                            <span class="label-text">
+                                            </span>
+                                            </input>
+                                        </label>
+                                        <div class="controls">
+                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Type">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="controls">
+                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="description">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="controls">
+                                            <input type="date" id="id" class="floatLabel" name="name" placeholder="Coté">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="controls">
+                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Date">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="controls">
+                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Heure">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="controls">
+                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Responsable">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="controls">
+                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Niveau">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="controls">
+                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Estimation">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="controls">
+                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Fichier">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="controls">
+                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Priorité">
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="table-footer">
+                <div class="table-footer" style="display: none;">
                     <div class="number-result">
                         <p>
                             1-4 résultats sur 4
@@ -208,15 +280,15 @@
                         <h2 class="">Filtre</h2>
                         <br>
                         <div class="controls">
-                            <label for="id">ID</label>
+                            <label for="id">Date saisie</label>
                             <input type="text" id="id" class="floatLabel" name="name">
                         </div>
                         <div class="controls">
-                            <label for="email">Libelle</label>
+                            <label for="email">Date demande</label>
                             <input type="text" id="email" class="floatLabel" name="email">
                         </div>
                         <div class="controls">
-                            <label for="desc">Description</label>
+                            <label for="desc">Projet</label>
                             <input type="text" id="desc" class="floatLabel" name="phone">
                         </div>
                         <div class="controls">
@@ -228,8 +300,8 @@
 
                     <!-- /.form-group -->
                     <div class="actions-container">
-                        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
-                        <button type="submit" value="Submit" class="btn btn-secondary">Reset</button>
+                        <button type="submit" value="Submit" class="btn btn-primary">Ajouter une colonne</button>
+                        <button type="submit" value="Submit" class="btn btn-secondary">Supprimer une colonne</button>
                     </div>
                 </form>
             </div>
@@ -244,34 +316,65 @@
         <div class="pop-up ">
             <div class="content ">
                 <div class="pop-container ">
-                    <span class="close ">close</span>
+                    <span class="close ">&times;</span>
                     <!-- pop up content -->
-                    <form action=" ">
+                    <h2 class="title">Enregistrer tache</h2>
+                    <form action="">
                         <!--  General -->
-                        <div class="form-group ">
-                            <h2 class=" ">Insertion</h2>
-                            <br>
-                            <div class="controls ">
-                                <label for="email ">Libelle</label>
-                                <input type="text " id="email " class="floatLabel " name="email ">
-                            </div>
-                            <div class="controls ">
-                                <label for="desc ">Description</label>
-                                <input type="text " id="desc " class="floatLabel " name="phone ">
-                            </div>
-                            <div class="controls ">
-                                <label for="country ">Date creation</label>
-                                <input type="date " id="country " class="floatLabel " name="country ">
 
+                        <div class="form-group">
+
+                            <div class="controls">
+                                <label for="id">ID</label>
+                                <input type="text" id="id" class="floatLabel" name="name">
+                            </div>
+                            <div class="controls">
+                                <label for="email">Coté</label>
+                                <input type="text" id="email" class="floatLabel" name="email">
+                            </div>
+                            <div class="controls">
+                                <label for="desc">Responsable</label>
+                                <input type="text" id="desc" class="floatLabel" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="controls">
+                                <label for="desc">Description</label>
+                                <input type="text" id="desc" class="floatLabel" name="phone">
+                            </div>
+                            <div class="controls">
+                                <label for="desc">Projet</label>
+                                <input type="text" id="desc" class="floatLabel" name="phone">
+                            </div>
+                            <div class="controls">
+                                <label for="date-creation">Date début min</label>
+                                <input type="date" id="country" class="floatLabel" name="country">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="controls">
+                                <label for="date-creation">Date début max</label>
+                                <input type="date" id="country" class="floatLabel" name="country">
+                            </div>
+                            <div class="controls">
+                                <label for="date-creation">écart</label>
+                                <input type="text" id="country" class="floatLabel" name="country">
+                            </div>
+                            <div class="controls">
+                                <label for="date-creation">Fonctionnalité</label>
+                                <input type="text" id="country" class="floatLabel" name="country">
+                            </div>
+                            <div class="controls">
+                                <label for="date-creation">Désignation</label>
+                                <input type="text" id="country" class="floatLabel" name="country">
                             </div>
                         </div>
 
-                        <!-- /.form-group -->
-                        <div class="actions-container ">
-                            <button type="submit " value="Submit " class="btn btn-primary ">Submit</button>
-                            <button type="submit " value="Submit " class="btn btn-secondary ">Reset</button>
-                        </div>
                     </form>
+                    <div class="actions-container">
+                        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" value="Submit" class="btn btn-secondary">Reset</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -288,6 +391,7 @@
     <script src="filter.js "></script>
     <script src="script-recap.js "></script>
 </body>
+
 
 </html>
 
