@@ -26,7 +26,11 @@
 
     <title>Html and css bases</title>
 </head>
-
+<style>
+    .table-body-xx {
+        overflow-x: auto;
+    }
+</style>
 <body>
 
 
@@ -157,109 +161,102 @@
                 </div>
                 <div class="table-section ">
                     <div class="table-header">
-                        <h1>Insertion Multiple</h1>
+                        <h1>Liste des taches</h1>
                         <div class="options">
                             <button class="btn btn-primary" id="recap-btn">Ajouter une colonne</button>
                             <button class="btn btn-primary" id="filter-btn"> Supprimer une colonne</button>
                         </div>
                     </div>
-                    <div class="table-body">
+                    <div class="table-body-xx">
                         <table class="table table-sortable">
                             <thead>
                                 <tr>    
-                                    <th>Type</th>
-                                    <th>description</th>
-                                    <th>Coté</th>
-                                    <th>Date</th>
-                                    <th>Heure</th>
+                                    <th>ID</th>
+                                    <th>ID mere</th>
                                     <th>Responsable</th>
-                                    <th>Niveau</th>
-                                    <th>Estimation</th>
+                                    <th>Projet</th>
+                                    <th>Fonctionnalité</th>
+                                    <th>Designation</th>
                                     <th>Fichier</th>
+                                    <th>Description</th>
+                                    <th>Estimation</th>
                                     <th>Priorité</th>
+                                    <th>Type</th>
+                                    <th>Cote</th>
+                                    <th>Date attribution</th>
+                                    <th>Heure attribution</th>
+                                    <th>Debut tache</th>
+                                    <th>Fin tache</th>
+                                    <th>Duree tache decimale</th>
+                                    <th>Duree tache</th>
+                                    <th>ecart</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td style="display: flex;align-items: center;">
-                                        <label class="check-label">
-                                            <input type="checkbox" name="check">
-                                            <span class="label-text">
-                                            </span>
-                                            </input>
-                                        </label>
-                                        <div class="controls">
-                                            <select id="id" class="floatLabel" name="name">
-                                                <option value="">Bug</option>
-                                                <option value="">Création</option>
-                                                <option value="">Modification</option>
-                                            </select>   
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="controls">
-                                            <!-- <input type="text" id="id" class="floatLabel" name="name" placeholder="description"> -->
-                                            <textarea id="editor"></textarea>
-                                            <script>
-                                                ClassicEditor
-                                                    .create(document.querySelector('#editor'))
-                                                    .catch(error => {
-                                                        console.error(error);
-                                                    });
-                                            </script>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="controls">
-                                            <select id="id" class="floatLabel" name="name" placeholder="Coté">
-                                                <option value="">Affichage</option>
-                                                <option value="">Base de données</option>
-                                                <option value="">Javascript</option>
-                                                <option value="">Mapping</option>
-                                                <option value="">Menu</option>
-                                                <option value="">Métier</option>
-                                                <option value="">Moteur</option>
-                                                <option value="">PDF</option>
-                                                <option value="">TEST</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="controls">
-                                            <input type="date" id="id" class="floatLabel" name="name" placeholder="Date">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="controls">
-                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Heure">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="controls">
-                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Responsable">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="controls">
-                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Niveau">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="controls">
-                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Estimation">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="controls">
-                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Fichier">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="controls">
-                                            <input type="text" id="id" class="floatLabel" name="name" placeholder="Priorité">
-                                        </div>
-                                    </td>
+                                    <td>1</td>
+                                    <td>123</td>
+                                    <td>John Doe</td>
+                                    <td>Project X</td>
+                                    <td>Feature A</td>
+                                    <td>Task 1</td>
+                                    <td>file.doc</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                                    <td>10 hours</td>
+                                    <td>High</td>
+                                    <td>Bug</td>
+                                    <td>5</td>
+                                    <td>2023-12-07</td>
+                                    <td>09:00 AM</td>
+                                    <td>2023-12-10</td>
+                                    <td>2023-12-15</td>
+                                    <td>3.5</td>
+                                    <td>3 days</td>
+                                    <td>0.5</td>
                                 </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>456</td>
+                                    <td>Billy john</td>
+                                    <td>Ketrika</td>
+                                    <td>Feature A</td>
+                                    <td>Task 2</td>
+                                    <td>file.doc</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                                    <td>9 hours</td>
+                                    <td>High</td>
+                                    <td>Bug</td>
+                                    <td>5</td>
+                                    <td>2023-12-07</td>
+                                    <td>09:00 AM</td>
+                                    <td>2023-12-10</td>
+                                    <td>2023-12-15</td>
+                                    <td>3.5</td>
+                                    <td>3 days</td>
+                                    <td>0.5</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>788</td>
+                                    <td>Ismael harijohn</td>
+                                    <td>Gallois</td>
+                                    <td>Feature A</td>
+                                    <td>Task 2</td>
+                                    <td>file.doc</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                                    <td>7 hours</td>
+                                    <td>High</td>
+                                    <td>Bug</td>
+                                    <td>5</td>
+                                    <td>2023-12-07</td>
+                                    <td>09:00 AM</td>
+                                    <td>2023-12-10</td>
+                                    <td>2023-12-15</td>
+                                    <td>3.5</td>
+                                    <td>3 days</td>
+                                    <td>0.5</td>
+                                </tr>
+                                <!-- Ajoutez plus de lignes avec des données si nécessaire -->
                             </tbody>
                         </table>
                     </div>
